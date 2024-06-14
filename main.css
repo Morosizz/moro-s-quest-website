@@ -46,3 +46,7 @@ html, body {
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
+
+.glowing {
+    box-shadow: 0 0 10px rgb(234, 143, 63);
+}
