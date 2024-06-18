@@ -13,7 +13,7 @@
 
     <title>Moro's Quest</title>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/content/css/main.css">
 </head>
 <body>
 
@@ -25,40 +25,11 @@
         <a href="/discord" class="button">Discord</a>
     </div>
     
-    <script>
-        document.getElementById('copyplayurl').addEventListener('click', (e) => {
-            e.preventDefault();
+    <script src="/content/js/copyPlayUrl.js"></script>
 
-            const copy = "play.morosquest.com";
-            const targetText = "Copied to clipboard!"
-            const initText = "Join now!"
-
-            const textarea = document.createElement('textarea');
-            textarea.value = copy;
-            document.body.appendChild(textarea);
-
-            textarea.select();
-            document.execCommand('copy');
-
-            document.body.removeChild(textarea);
-
-            e.target.innerText = targetText;
-
-            let timeNow = Date.now();
-
-            e.target.addEventListener('mouseleave', () => {
-                if (Date.now() - timeNow < 2000) {
-                    setTimeout(() => {
-                        e.target.innerText = initText;
-                    }, 2000);
-                }
-                else {
-                    e.target.innerText = initText;
-                }
-            });
-
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/basic@3.2.1/tsparticles.basic.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/shape-image@3.2.1/tsparticles.shape.image.min.js"></script>
+    <script src="/content/js/particles.js"></script>
 
 </body>
 </html>
