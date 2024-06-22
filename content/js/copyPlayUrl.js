@@ -2,7 +2,7 @@ document.getElementById('copyplayurl').addEventListener('click', (e) => {
     e.preventDefault();
 
     const copy = "play.morosquest.com";
-    const targetText = "Copied to clipboard!"
+    const targetText = "Copied the IP to clipboard!"
     const initText = "Join now!"
 
     const textarea = document.createElement('textarea');
